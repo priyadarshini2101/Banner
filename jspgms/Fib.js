@@ -1,0 +1,52 @@
+// const prompt=require("prompt-sync")({sigint:true});
+
+
+// // program to display fibonacci sequence using recursion
+// function fibonacci(num) {
+//     if(num < 2) {
+//         return num;
+//     }
+//     else {
+//         return fibonacci(num-1) + fibonacci(num - 2);
+//     }
+// }
+
+// // take nth term input from the user
+// const nTerms = prompt('Enter the number of terms: ');
+
+// if(nTerms <=0) {
+//     console.log('Enter a positive integer.');
+// }
+// else {
+//     for(let i = 0; i < nTerms; i++) {
+//         console.log(fibonacci(i));
+//     }
+// }
+
+const prompt = require("prompt-sync")({sigint:true})
+const nTerms = prompt('Enter the terms:')
+var n = 5
+
+function fib(num){
+    
+        if(num<2){
+            return num
+        }
+        else{
+        return fib(num-1)+fib(num-2)
+        }
+    
+}
+
+if(nTerms<= 0){
+    console.log('Enter positive number:')
+}
+
+else {
+    
+    for(let i=0;i<=nTerms;i++){
+       console.log(fib(i))
+    }
+   
+}
+
